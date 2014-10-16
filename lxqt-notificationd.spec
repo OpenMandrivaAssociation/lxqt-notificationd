@@ -1,4 +1,4 @@
-%define git 20140802
+%define git 0
 
 Name: lxqt-notificationd
 Version: 0.8.0
