@@ -37,3 +37,5 @@ Notification daemon for the LXQt desktop
 %{_bindir}/lxqt-notificationd
 %{_bindir}/lxqt-config-notificationd
 %{_datadir}/applications/lxqt-config-notificationd.desktop
+%{_datadir}/lxqt/translations/lxqt-config-notificationd
+%{_datadir}/lxqt/translations/lxqt-notificationd
