@@ -7,7 +7,7 @@ Source0: %{name}-%{git}.tar.xz
 Release: 0.%{git}.1
 %else
 Source0: http://lxqt.org/downloads/lxqt/%{version}/%{name}-%{version}.tar.xz
-Release: 1
+Release: 2
 %endif
 Summary: Notification daemon for the LXQt desktop
 URL: http://lxqt.org/
@@ -37,9 +37,9 @@ Notification daemon for the LXQt desktop
 desktop-file-edit --remove-category=LXQt --add-category=X-LXQt \
 	--remove-only-show-in=LXQt --add-only-show-in=X-LXQt %{buildroot}%{_datadir}/applications/lxqt-config-notificationd.desktop
 
-%files
+%find_lang lxqt-config-notificationd lxqt-notificationd --with-qt
+
+%files -f lxqt-config-notificationd.lang lxqt-notificationd.lang
 %{_bindir}/lxqt-notificationd
 %{_bindir}/lxqt-config-notificationd
 %{_datadir}/applications/lxqt-config-notificationd.desktop
-%{_datadir}/lxqt/translations/lxqt-config-notificationd
-%{_datadir}/lxqt/translations/lxqt-notificationd
