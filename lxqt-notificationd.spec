@@ -47,4 +47,4 @@ desktop-file-edit --remove-category=LXQt --add-category=X-LXQt \
 %{_bindir}/lxqt-notificationd
 %{_bindir}/lxqt-config-notificationd
 %{_datadir}/applications/lxqt-config-notificationd.desktop
-%{_datadir}/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd-*.qm
+%{_datadir}/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_*.qm
