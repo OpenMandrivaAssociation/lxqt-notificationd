@@ -35,7 +35,7 @@ Notification daemon for the LXQt desktop
 %makeinstall_std -C build
 
 # workaround
-sed -i -e 's/GenericName[ru].*//g' -e 's/Name[ru].*//g' -e 's/Comment[ru].*//g' %{buildroot}%{_datadir}/applications/lxqt-config-notificationd.desktop
+sed -i -e 's/GenericName\[ru\].*//' -e 's/Name\[ru\].*//' -e 's/Comment\[ru\].*//' %{buildroot}%{_datadir}/applications/lxqt-config-notificationd.desktop
 
 desktop-file-edit --remove-category=LXQt --add-category=X-LXQt \
 	--remove-only-show-in=LXQt --add-only-show-in=X-LXQt %{buildroot}%{_datadir}/applications/lxqt-config-notificationd.desktop
