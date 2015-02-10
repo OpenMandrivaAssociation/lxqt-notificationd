@@ -37,9 +37,10 @@ Notification daemon for the LXQt desktop
 desktop-file-edit --remove-category=LXQt --add-category=X-LXQt \
 	--remove-only-show-in=LXQt --add-only-show-in=X-LXQt %{buildroot}%{_datadir}/applications/lxqt-config-notificationd.desktop
 
-%find_lang lxqt-config-notificationd lxqt-notificationd --with-qt
+%find_lang lxqt-config-notificationd --with-qt
+%find_lang lxqt-notificationd --with-qt
 
-%files -f lxqt-config-notificationd.lang lxqt-notificationd.lang
+%files -f lxqt-config-notificationd.lang -f lxqt-notificationd.lang
 %{_bindir}/lxqt-notificationd
 %{_bindir}/lxqt-config-notificationd
 %{_datadir}/applications/lxqt-config-notificationd.desktop
