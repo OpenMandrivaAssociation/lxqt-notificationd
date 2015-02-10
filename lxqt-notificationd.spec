@@ -19,6 +19,7 @@ BuildRequires: cmake(qt5xdg)
 BuildRequires: cmake(Qt5X11Extras)
 BuildRequires: cmake(Qt5LinguistTools)
 BuildRequires: qt5-devel
+BuildRequires: desktop-file-utils
 
 %description
 Notification daemon for the LXQt desktop
@@ -32,6 +33,9 @@ Notification daemon for the LXQt desktop
 
 %install
 %makeinstall_std -C build
+
+desktop-file-edit --remove-category=LXQt --add-category=X-LXQt \
+	--remove-only-show-in=LXQt --add-only-show-in=X-LXQt %{buildroot}%{_datadir}/applications/lxqt-config-notificationd.desktop
 
 %files
 %{_bindir}/lxqt-notificationd
