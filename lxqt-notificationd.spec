@@ -7,25 +7,27 @@ Source0: %{name}-%{git}.tar.xz
 Release: 0.%{git}.1
 %else
 Source0: http://lxqt.org/downloads/lxqt/%{version}/%{name}-%{version}.tar.xz
-Release: 3
+Release: 4
 %endif
 Summary: Notification daemon for the LXQt desktop
 URL: http://lxqt.org/
 License: GPL
 Group: Graphical desktop/KDE
 BuildRequires: cmake
+BuildRequires: qmake5
 BuildRequires: cmake(lxqt)
 BuildRequires: cmake(qt5xdg)
-BuildRequires: cmake(Qt5X11Extras)
+BuildRequires: cmake(Qt5Widgets)
+BuildRequires: cmake(Qt5DBus)
+BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: cmake(Qt5LinguistTools)
-BuildRequires: qt5-devel
 
 %description
 Notification daemon for the LXQt desktop.
 
 %prep
 %setup -q
-%cmake -DUSE_QT5:BOOL=ON
+%cmake
 
 %build
 %make -C build
