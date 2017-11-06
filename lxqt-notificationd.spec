@@ -1,12 +1,12 @@
 %define git 0
 
 Name: lxqt-notificationd
-Version: 0.11.1
+Version: 0.12.0
 %if %git
 Source0: %{name}-%{git}.tar.xz
-Release: 1.%{git}.1
+Release: 0.%{git}.1
 %else
-Source0: https://github.com/lxde/%{name}/archive/%{name}-%{version}.tar.xz
+Source0: https://downloads.lxqt.org/downloads/%{name}/%{version}/%{name}-%{version}.tar.xz
 Release: 1
 %endif
 Summary: Notification daemon for the LXQt desktop
@@ -22,6 +22,7 @@ BuildRequires: cmake(Qt5Widgets)
 BuildRequires: cmake(Qt5DBus)
 BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: cmake(Qt5LinguistTools)
+BuildRequires: lxqt-build-tools git-core
 
 %description
 Notification daemon for the LXQt desktop.
@@ -55,3 +56,4 @@ export LC_ALL=en_US.utf-8
 %{_bindir}/lxqt-config-notificationd
 %{_datadir}/applications/lxqt-config-notificationd.desktop
 %{_datadir}/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_*.qm
+%{_sysconfdir}/xdg/qt5/autostart/lxqt-notifications.desktop
