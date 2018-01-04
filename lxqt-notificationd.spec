@@ -7,7 +7,7 @@ Source0: %{name}-%{git}.tar.xz
 Release: 0.%{git}.1
 %else
 Source0: https://downloads.lxqt.org/downloads/%{name}/%{version}/%{name}-%{version}.tar.xz
-Release: 1
+Release: 2
 %endif
 Summary: Notification daemon for the LXQt desktop
 URL: http://lxqt.org/
@@ -22,7 +22,8 @@ BuildRequires: cmake(Qt5Widgets)
 BuildRequires: cmake(Qt5DBus)
 BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: cmake(Qt5LinguistTools)
-BuildRequires: lxqt-build-tools git-core
+BuildRequires: lxqt-build-tools
+BuildRequires: git-core
 
 %description
 Notification daemon for the LXQt desktop.
@@ -56,4 +57,4 @@ export LC_ALL=en_US.utf-8
 %{_bindir}/lxqt-config-notificationd
 %{_datadir}/applications/lxqt-config-notificationd.desktop
 %{_datadir}/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_*.qm
-%{_sysconfdir}/xdg/qt5/autostart/lxqt-notifications.desktop
+%{_sysconfdir}/xdg/autostart/lxqt-notifications.desktop
