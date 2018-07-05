@@ -31,7 +31,9 @@ Notification daemon for the LXQt desktop.
 %prep
 %setup -q
 
-%cmake_qt5 -G Ninja
+%cmake_qt5 \
+	-DPULL_TRANSLATIONS:BOOL=OFF \
+	-G Ninja
 
 %build
 # Need to be in a UTF-8 locale so grep (used by the desktop file
@@ -49,12 +51,8 @@ export LANG=en_US.utf-8
 export LC_ALL=en_US.utf-8
 %ninja_install -C build
 
-%find_lang lxqt-config-notificationd --with-qt
-%find_lang lxqt-notificationd --with-qt
-
-%files -f lxqt-config-notificationd.lang -f lxqt-notificationd.lang
+%files
 %{_bindir}/lxqt-notificationd
 %{_bindir}/lxqt-config-notificationd
 %{_datadir}/applications/lxqt-config-notificationd.desktop
-%{_datadir}/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_*.qm
 %{_sysconfdir}/xdg/autostart/lxqt-notifications.desktop
