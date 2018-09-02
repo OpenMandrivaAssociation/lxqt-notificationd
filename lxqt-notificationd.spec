@@ -4,10 +4,10 @@ Name: lxqt-notificationd
 Version: 0.13.0
 %if %git
 Source0: %{name}-%{git}.tar.xz
-Release: 1.%{git}.1
+Release: 0.%{git}.1
 %else
 Source0: https://downloads.lxqt.org/downloads/%{name}/%{version}/%{name}-%{version}.tar.xz
-Release: 1
+Release: 2
 %endif
 Summary: Notification daemon for the LXQt desktop
 URL: http://lxqt.org/
