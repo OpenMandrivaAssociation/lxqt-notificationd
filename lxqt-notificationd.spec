@@ -24,6 +24,7 @@ BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: cmake(Qt5LinguistTools)
 BuildRequires: lxqt-build-tools
 BuildRequires: git-core
+Provides: virtual-notification-daemon
 
 %description
 Notification daemon for the LXQt desktop.
