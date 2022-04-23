@@ -1,10 +1,10 @@
 %define git 0
 
 Name: lxqt-notificationd
-Version: 1.0.0
+Version: 1.1.0
 %if %git
 Source0: %{name}-%{git}.tar.xz
-Release: 0.%{git}.1
+Release: 1.%{git}.1
 %else
 Source0: https://github.com/lxqt/lxqt-notificationd/releases/download/%{version}/lxqt-notificationd-%{version}.tar.xz
 Release: 1
@@ -58,7 +58,5 @@ export LC_ALL=en_US.utf-8
 %{_bindir}/lxqt-config-notificationd
 %{_datadir}/applications/lxqt-config-notificationd.desktop
 %{_sysconfdir}/xdg/autostart/lxqt-notifications.desktop
-%lang(arn) %{_datadir}/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_arn.qm
-%lang(ast) %{_datadir}/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_ast.qm
-%lang(arn) %{_datadir}/lxqt/translations/lxqt-notificationd/lxqt-notificationd_arn.qm
-%lang(ast) %{_datadir}/lxqt/translations/lxqt-notificationd/lxqt-notificationd_ast.qm
+%dir %{_datadir}/lxqt/translations/lxqt-config-notificationd
+%dir %{_datadir}/lxqt/translations/lxqt-notificationd
