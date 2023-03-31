@@ -7,7 +7,7 @@ Source0: %{name}-%{git}.tar.xz
 Release: 1.%{git}.1
 %else
 Source0: https://github.com/lxqt/lxqt-notificationd/releases/download/%{version}/lxqt-notificationd-%{version}.tar.xz
-Release: 3
+Release: 4
 %endif
 Summary: Notification daemon for the LXQt desktop
 URL: http://lxqt.org/
