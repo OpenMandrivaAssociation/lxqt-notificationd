@@ -1,7 +1,7 @@
 %define git 0
 
 Name: lxqt-notificationd
-Version: 1.3.0
+Version: 1.4.0
 %if %git
 Source0: %{name}-%{git}.tar.xz
 Release: 1.%{git}1
