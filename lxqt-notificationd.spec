@@ -20,6 +20,7 @@ BuildRequires: cmake(Qt6Widgets)
 BuildRequires: cmake(Qt6DBus)
 BuildRequires: cmake(KF6WindowSystem)
 BuildRequires: cmake(Qt6LinguistTools)
+BuildRequires: cmake(LayerShellQt)
 BuildRequires: lxqt-build-tools
 BuildRequires: git-core
 Provides: virtual-notification-daemon
