@@ -1,7 +1,7 @@
 #define git 0
 
 Name: lxqt-notificationd
-Version: 1.4.0
+Version: 2.0.0
 %if 0%{?git:1}
 Source0: %{name}-%{git}.tar.xz
 %else
@@ -13,14 +13,13 @@ URL: http://lxqt.org/
 License: GPL
 Group: Graphical desktop/KDE
 BuildRequires: cmake
-BuildRequires: qmake5
 BuildRequires: ninja
 BuildRequires: cmake(lxqt)
-BuildRequires: cmake(qt5xdg)
-BuildRequires: cmake(Qt5Widgets)
-BuildRequires: cmake(Qt5DBus)
-BuildRequires: cmake(KF5WindowSystem)
-BuildRequires: cmake(Qt5LinguistTools)
+BuildRequires: cmake(qt6xdg)
+BuildRequires: cmake(Qt6Widgets)
+BuildRequires: cmake(Qt6DBus)
+BuildRequires: cmake(KF6WindowSystem)
+BuildRequires: cmake(Qt6LinguistTools)
 BuildRequires: lxqt-build-tools
 BuildRequires: git-core
 Provides: virtual-notification-daemon
@@ -31,7 +30,7 @@ Notification daemon for the LXQt desktop.
 %prep
 %autosetup -p1
 
-%cmake_qt5 \
+%cmake \
 	-DPULL_TRANSLATIONS:BOOL=OFF \
 	-G Ninja
 
