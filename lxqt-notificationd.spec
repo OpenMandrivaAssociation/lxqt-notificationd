@@ -9,7 +9,7 @@ Source0: https://github.com/lxqt/lxqt-notificationd/releases/download/%{version}
 %endif
 Release: %{?git:0.%{git}.}2
 Summary: Notification daemon for the LXQt desktop
-URL: http://lxqt.org/
+URL: https://lxqt.org/
 License: GPL
 Group: Graphical desktop/KDE
 BuildRequires: cmake
