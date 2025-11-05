@@ -1,13 +1,13 @@
 #define git 0
 
 Name: lxqt-notificationd
-Version: 2.2.0
+Version: 2.3.0
 %if 0%{?git:1}
 Source0: %{name}-%{git}.tar.xz
 %else
 Source0: https://github.com/lxqt/lxqt-notificationd/releases/download/%{version}/lxqt-notificationd-%{version}.tar.xz
 %endif
-Release: %{?git:0.%{git}.}2
+Release: %{?git:0.%{git}.}1
 Summary: Notification daemon for the LXQt desktop
 URL: https://lxqt.org/
 License: GPL
